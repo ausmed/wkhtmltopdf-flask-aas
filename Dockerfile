@@ -16,7 +16,7 @@ WORKDIR /tmp
    tar xfv wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
    cp -R wkhtmltox/* / && \
    rm -rf wkhtmltox && \
-   rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
+   rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 
 WORKDIR /
 
