@@ -12,11 +12,11 @@ RUN apt-get clean && \
 
 WORKDIR /tmp
 
-   wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
-   tar xfv wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
-   cp -R wkhtmltox/* / && \
-   rm -rf wkhtmltox && \
-   rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+RUN wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
+    tar xfv wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
+    cp -R wkhtmltox/* / && \
+    rm -rf wkhtmltox && \
+    rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 
 WORKDIR /
 
