@@ -13,9 +13,11 @@ RUN apt-get clean && \
     python-pip && \
     wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
     tar xfv wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
-    cp -R wkhtmltox/* / && \
+    cp -R wkhtmltox/* /usr/ && \
     rm -rf wkhtmltox && \
-    rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+    rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
+    ln -s /usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf && \
+    ln -s /usr/local/bin/wkhtmltoimage /usr/bin/wkhtmltoimage
 
 WORKDIR /
 
