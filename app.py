@@ -9,6 +9,11 @@ app = Flask(__name__)
 
 tmpfolder = "/tmp/"
 
+
+@app.route("/health", methods=['GET'])
+def health():
+    return {'message': 'Healthy'}
+
 @app.route("/pdf", methods=['POST'])
 def pdf():
     config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
